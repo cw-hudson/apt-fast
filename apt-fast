@@ -189,7 +189,7 @@ msg_already_running()
 while [ -f "$LCK_FILE.lock" ]; do
   msg_already_running
   sleep 1
-fi
+done
 
 
 # create the lock file and lock it, die on failure
