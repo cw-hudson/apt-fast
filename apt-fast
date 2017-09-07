@@ -186,9 +186,9 @@ msg_already_running()
 }
 
 # Check if a lock file exists.
-if [ -f "$LCK_FILE.lock" ]; then
+while [ -f "$LCK_FILE.lock" ]; do
   msg_already_running
-  exit 1
+  sleep 1
 fi
 
 
